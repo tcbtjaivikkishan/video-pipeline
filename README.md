@@ -1,11 +1,12 @@
-# 🎬 Automated Video Pipeline (Zoho WorkDrive → Cloudflare R2)
+# 🎬 Automated Video Pipeline (Zoho WorkDrive → FFmpeg → Cloudflare R2)
 
 An automated background service that:
 1. Scans your **Zoho WorkDrive Folder** (`TCBT वृक्षायुर्वेद विज्ञान CLASSES`).
 2. Detects new/unprocessed videos (~1 GB raw footage).
 3. Downloads the raw video stream automatically.
-4. Uploads directly to **Cloudflare R2** via parallel multipart uploads with **$0 egress fees**.
-5. Cleans up temporary disk files and tracks processed items in `processed-videos.json` to prevent duplicate processing.
+4. Compresses it with **FFmpeg** (`H.264`, `CRF 23`, `scale 720p/1080p`, `AAC 128k`, and `-movflags +faststart`) to reduce file size by **~90%** (1 GB → ~70–100 MB) and enable instant web/mobile streaming.
+5. Uploads directly to **Cloudflare R2** via parallel multipart uploads with **$0 egress fees**.
+6. Cleans up temporary disk files and tracks processed items in `processed-videos.json` to prevent duplicate processing.
 
 ---
 

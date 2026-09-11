@@ -7,7 +7,7 @@ async function main() {
   const isWatch = args.includes('--watch');
 
   console.log('╔══════════════════════════════════════════════════════════╗');
-  console.log('║     🎬 ZOHO WORKDRIVE → CLOUDFLARE R2 PIPELINE            ║');
+  console.log('║     🎬 ZOHO WORKDRIVE → FFmpeg → CLOUDFLARE R2 PIPELINE  ║');
   console.log('╚══════════════════════════════════════════════════════════╝');
 
   let config;

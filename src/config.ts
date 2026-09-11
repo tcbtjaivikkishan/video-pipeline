@@ -21,6 +21,12 @@ export interface PipelineConfig {
     bucketName: string;
     publicDomain: string;
   };
+  compression: {
+    maxWidth: number;
+    crf: number;
+    preset: string;
+    audioBitrate: string;
+  };
   automation: {
     pollIntervalMinutes: number;
     tempDir: string;
@@ -62,6 +68,12 @@ export function loadConfig(): PipelineConfig {
       secretAccessKey: getEnv('R2_SECRET_ACCESS_KEY', 'CHANGE_ME'),
       bucketName: getEnv('R2_BUCKET_NAME', 'product-videos'),
       publicDomain: process.env.R2_PUBLIC_DOMAIN || '',
+    },
+    compression: {
+      maxWidth: parseInt(process.env.VIDEO_MAX_WIDTH || '1280', 10),
+      crf: parseInt(process.env.VIDEO_CRF || '23', 10),
+      preset: process.env.VIDEO_PRESET || 'medium',
+      audioBitrate: process.env.AUDIO_BITRATE || '128k',
     },
     automation: {
       pollIntervalMinutes: parseInt(

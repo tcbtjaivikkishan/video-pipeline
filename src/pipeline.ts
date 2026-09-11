@@ -3,6 +3,7 @@ import * as path from 'path';
 import { PipelineConfig } from './config';
 import { ZohoAuthService } from './zoho/auth.service';
 import { WorkDriveService, WorkDriveFile } from './zoho/workdrive.service';
+import { FFmpegCompressorService, CompressionResult } from './compressor/ffmpeg.service';
 import { R2StorageService, R2UploadResult } from './storage/r2.service';
 import { StateService, ProcessedVideoRecord } from './tracker/state.service';
 
@@ -26,19 +27,21 @@ export function formatVideoKey(fileName: string): string {
 export class VideoPipeline {
   private authService: ZohoAuthService;
   private workDriveService: WorkDriveService;
+  private compressorService: FFmpegCompressorService;
   private r2Service: R2StorageService;
   private stateService: StateService;
 
   constructor(private config: PipelineConfig) {
     this.authService = new ZohoAuthService(config);
     this.workDriveService = new WorkDriveService(config, this.authService);
+    this.compressorService = new FFmpegCompressorService(config);
     this.r2Service = new R2StorageService(config);
     this.stateService = new StateService();
   }
 
   /**
    * Process a single video file through the entire pipeline:
-   * Download → Upload to R2 → Cleanup → Record State
+   * Download → Compress → Upload to R2 → Cleanup → Record State
    */
   async processVideo(video: WorkDriveFile): Promise<ProcessedVideoRecord> {
     console.log(`\n============================================================`);
@@ -49,10 +52,11 @@ export class VideoPipeline {
     const rawExt = video.extn || 'mp4';
     const tempDir = this.config.automation.tempDir;
     const rawFilePath = path.join(tempDir, `${video.id}_raw.${rawExt}`);
+    const compressedFilePath = path.join(tempDir, `${video.id}_compressed.mp4`);
 
     try {
       // 1. Download from Zoho WorkDrive
-      console.log(`\n[1/2] ⬇️ Downloading from WorkDrive...`);
+      console.log(`\n[1/3] ⬇️ Downloading from WorkDrive...`);
       await this.workDriveService.downloadFile(
         video.id,
         rawFilePath,
@@ -62,13 +66,26 @@ export class VideoPipeline {
       );
       process.stdout.write('\n');
 
-      // 2. Upload to Cloudflare R2
-      console.log(`\n[2/2] ☁️ Uploading to Cloudflare R2...`);
+      // 2. Compress via FFmpeg (+faststart)
+      console.log(`\n[2/3] 🗜️ Compressing with FFmpeg (H.264 +faststart)...`);
+      const compResult: CompressionResult = await this.compressorService.compressVideo(
+        rawFilePath,
+        compressedFilePath,
+        (percent, fps, timeMark) => {
+          process.stdout.write(
+            `\r   Compressing: ${percent}% | FPS: ${fps} | Time: ${timeMark}`,
+          );
+        },
+      );
+      process.stdout.write('\n');
+
+      // 3. Upload to Cloudflare R2
+      console.log(`\n[3/3] ☁️ Uploading to Cloudflare R2...`);
       const targetFileName = formatVideoKey(video.name);
       const r2Key = `videos/${targetFileName}`;
 
       const uploadResult: R2UploadResult = await this.r2Service.uploadVideo(
-        rawFilePath,
+        compressedFilePath,
         r2Key,
         (percent, mb) => {
           process.stdout.write(`\r   Uploading to R2: ${percent}% (${mb.toFixed(1)} MB)`);
@@ -76,11 +93,13 @@ export class VideoPipeline {
       );
       process.stdout.write('\n');
 
-      // 3. Record state in processed-videos.json
+      // 4. Record state in processed-videos.json
       const record: ProcessedVideoRecord = {
         workDriveFileId: video.id,
         fileName: video.name,
-        originalSizeBytes: uploadResult.sizeBytes,
+        originalSizeBytes: compResult.originalSizeBytes,
+        compressedSizeBytes: compResult.compressedSizeBytes,
+        compressionRatio: compResult.compressionRatio,
         r2Key: uploadResult.r2Key,
         r2Url: uploadResult.r2Url,
         processedAt: new Date().toISOString(),
@@ -91,8 +110,9 @@ export class VideoPipeline {
       console.log(`\n✨ Success: "${video.name}" is live at: ${uploadResult.r2Url}`);
       return record;
     } finally {
-      // 4. Cleanup local temp file
+      // 5. Cleanup local temp files
       this.cleanupFile(rawFilePath);
+      this.cleanupFile(compressedFilePath);
     }
   }
 
