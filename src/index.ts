@@ -7,7 +7,7 @@ async function main() {
   const isWatch = args.includes('--watch');
 
   console.log('╔══════════════════════════════════════════════════════════╗');
-  console.log('║     🎬 ZOHO WORKDRIVE → FFmpeg → CLOUDFLARE R2 PIPELINE  ║');
+  console.log('║     🎬 ZOHO WORKDRIVE → CLOUDFLARE R2 PIPELINE            ║');
   console.log('╚══════════════════════════════════════════════════════════╝');
 
   let config;
@@ -70,10 +70,12 @@ async function main() {
       console.log(`\n============================================================`);
       console.log(`🎉 Pipeline run completed! Processed ${results.length} video(s):`);
       results.forEach((r, idx) => {
-        const origMb = (r.originalSizeBytes / (1024 * 1024)).toFixed(1);
-        const compMb = (r.compressedSizeBytes / (1024 * 1024)).toFixed(1);
+        const mb = (r.originalSizeBytes / (1024 * 1024)).toFixed(1);
+        const sizeInfo = r.compressedSizeBytes
+          ? `${mb}MB → ${(r.compressedSizeBytes / (1024 * 1024)).toFixed(1)}MB (-${r.compressionRatio})`
+          : `${mb}MB`;
         console.log(
-          ` ${idx + 1}. ${r.fileName} (${origMb}MB → ${compMb}MB, -${r.compressionRatio})\n    URL: ${r.r2Url}`,
+          ` ${idx + 1}. ${r.fileName} (${sizeInfo})\n    URL: ${r.r2Url}`,
         );
       });
       console.log(`============================================================\n`);

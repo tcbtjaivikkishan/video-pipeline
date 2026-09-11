@@ -5,8 +5,8 @@ export interface ProcessedVideoRecord {
   workDriveFileId: string;
   fileName: string;
   originalSizeBytes: number;
-  compressedSizeBytes: number;
-  compressionRatio: string;
+  compressedSizeBytes?: number;
+  compressionRatio?: string;
   r2Key: string;
   r2Url: string;
   processedAt: string;

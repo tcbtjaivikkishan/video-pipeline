@@ -1,12 +1,11 @@
-# 🎬 Automated Video Pipeline (Zoho WorkDrive → FFmpeg → Cloudflare R2)
+# 🎬 Automated Video Pipeline (Zoho WorkDrive → Cloudflare R2)
 
 An automated background service that:
 1. Scans your **Zoho WorkDrive Folder** (`TCBT वृक्षायुर्वेद विज्ञान CLASSES`).
 2. Detects new/unprocessed videos (~1 GB raw footage).
-3. Downloads the video stream automatically.
-4. Compresses it with **FFmpeg** (`H.264`, `CRF 23`, `scale 720p/1080p`, `AAC 128k`, and `-movflags +faststart`) to reduce file size by **~90%** (1 GB → ~70–100 MB) and enable instant web/mobile streaming.
-5. Uploads directly to **Cloudflare R2** via parallel multipart uploads with **$0 egress fees**.
-6. Cleans up temporary disk files and tracks processed items in `processed-videos.json` to prevent duplicate processing.
+3. Downloads the raw video stream automatically.
+4. Uploads directly to **Cloudflare R2** via parallel multipart uploads with **$0 egress fees**.
+5. Cleans up temporary disk files and tracks processed items in `processed-videos.json` to prevent duplicate processing.
 
 ---
 
@@ -81,7 +80,6 @@ Zoho refresh tokens are permanently tied to the scopes granted when the initial 
    ```bash
    npm install
    ```
-   *(Note: `ffmpeg-static` is included, which downloads the Windows `ffmpeg.exe` binary automatically inside `node_modules`. You do NOT need to install FFmpeg globally or configure Windows PATH!)*
 
 3. Configure environment variables:
    Copy `.env.example` to `.env`:
@@ -125,10 +123,8 @@ Each successfully processed video is recorded in `processed-videos.json`:
       "workDriveFileId": "file_resource_id_123",
       "fileName": "TCBT_Class_01.mp4",
       "originalSizeBytes": 1073741824,
-      "compressedSizeBytes": 83886080,
-      "compressionRatio": "92.2%",
-      "r2Key": "videos/tcbt_class_01_file_res.mp4",
-      "r2Url": "https://media.yourdomain.com/videos/tcbt_class_01_file_res.mp4",
+      "r2Key": "videos/CLASS 1.mp4",
+      "r2Url": "https://media.yourdomain.com/videos/CLASS 1.mp4",
       "processedAt": "2026-09-11T12:05:00.000Z"
     }
   }
