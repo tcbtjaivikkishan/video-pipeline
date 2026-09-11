@@ -142,6 +142,10 @@ export class VideoPipeline {
       try {
         const result = await this.processVideo(video);
         processedResults.push(result);
+        // Allow garbage collector to reclaim memory between large video uploads
+        if (global.gc) {
+          global.gc();
+        }
       } catch (err: any) {
         console.error(
           `❌ Failed to process video "${video.name}" (${video.id}):`,

@@ -5,10 +5,11 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/index.ts",
-    "process-one": "ts-node src/index.ts --limit 1",
-    "watch": "ts-node src/index.ts --watch",
-    "test-connection": "ts-node src/index.ts --test"
+    "start": "ts-node --transpile-only src/index.ts",
+    "start:prod": "node dist/index.js",
+    "process-one": "ts-node --transpile-only src/index.ts --limit 1",
+    "watch": "ts-node --transpile-only src/index.ts --watch",
+    "test-connection": "ts-node --transpile-only src/index.ts --test"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.758.0",

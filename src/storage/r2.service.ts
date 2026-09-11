@@ -67,8 +67,8 @@ export class R2StorageService {
         ContentType: 'video/mp4',
         CacheControl: 'public, max-age=31536000, immutable',
       },
-      queueSize: 4, // 4 concurrent chunks
-      partSize: 10 * 1024 * 1024, // 10 MB per part
+      queueSize: 2, // Keep concurrency at 2 to minimize memory usage
+      partSize: 5 * 1024 * 1024, // 5 MB per part (S3 minimum) to minimize RAM footprint
       leavePartsOnError: false,
     });
 
@@ -84,7 +84,11 @@ export class R2StorageService {
       }
     });
 
-    await uploader.done();
+    try {
+      await uploader.done();
+    } finally {
+      fileStream.destroy();
+    }
 
     // Determine public URL
     const publicDomain = this.config.r2.publicDomain.replace(/\/$/, '');

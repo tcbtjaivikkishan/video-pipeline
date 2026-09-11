@@ -1,6 +1,8 @@
 import axios from 'axios';
 import * as fs from 'fs';
 import * as path from 'path';
+import { Transform } from 'stream';
+import { pipeline } from 'stream/promises';
 import { PipelineConfig } from '../config';
 import { ZohoAuthService } from './auth.service';
 
@@ -90,7 +92,8 @@ export class WorkDriveService {
   }
 
   /**
-   * Stream download a file from WorkDrive to a local destination
+   * Stream download a file from WorkDrive to a local destination with strict backpressure
+   * to keep memory consumption virtually flat (< 5 MB) regardless of file size.
    */
   async downloadFile(
     fileId: string,
@@ -107,7 +110,9 @@ export class WorkDriveService {
         Authorization: `Zoho-oauthtoken ${token}`,
       },
       responseType: 'stream',
-      timeout: 120_000,
+      maxContentLength: Infinity,
+      maxBodyLength: Infinity,
+      timeout: 300_000,
     });
 
     const contentLengthHeader = response.headers['content-length'];
@@ -117,8 +122,9 @@ export class WorkDriveService {
 
     const writer = fs.createWriteStream(destinationPath);
 
-    return new Promise((resolve, reject) => {
-      response.data.on('data', (chunk: Buffer) => {
+    // Transform stream tracks bytes and progress without breaking backpressure
+    const progressTracker = new Transform({
+      transform(chunk: Buffer, _encoding, callback) {
         downloadedBytes += chunk.length;
         if (totalBytes > 0 && onProgress) {
           const percent = Math.floor((downloadedBytes / totalBytes) * 100);
@@ -128,24 +134,23 @@ export class WorkDriveService {
             onProgress(percent, mb);
           }
         }
-      });
-
-      response.data.pipe(writer);
-
-      writer.on('finish', () => {
-        console.log(`✅ [WorkDrive] Download completed: ${destinationPath}`);
-        resolve(destinationPath);
-      });
-
-      writer.on('error', (err) => {
-        console.error('❌ [WorkDrive] Write stream error:', err);
-        reject(err);
-      });
-
-      response.data.on('error', (err: any) => {
-        console.error('❌ [WorkDrive] Download stream error:', err);
-        reject(err);
-      });
+        callback(null, chunk);
+      },
     });
+
+    try {
+      await pipeline(response.data, progressTracker, writer);
+      console.log(`✅ [WorkDrive] Download completed: ${destinationPath}`);
+      return destinationPath;
+    } catch (err: any) {
+      console.error('❌ [WorkDrive] Download stream error:', err.message);
+      // Clean up partial file on failure
+      try {
+        if (fs.existsSync(destinationPath)) {
+          fs.unlinkSync(destinationPath);
+        }
+      } catch {}
+      throw err;
+    }
   }
 }
