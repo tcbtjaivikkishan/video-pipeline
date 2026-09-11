@@ -1,4 +1,4 @@
-import { S3Client, HeadBucketCommand } from '@aws-sdk/client-s3';
+import { S3Client, HeadBucketCommand, HeadObjectCommand } from '@aws-sdk/client-s3';
 import { Upload } from '@aws-sdk/lib-storage';
 import * as fs from 'fs';
 import { PipelineConfig } from '../config';
@@ -38,6 +38,23 @@ export class R2StorageService {
       console.error(
         `❌ [R2 Storage] Connection check failed: ${err.message}`,
       );
+      return false;
+    }
+  }
+
+  /**
+   * Check if a video key already exists in Cloudflare R2
+   */
+  async fileExists(key: string): Promise<boolean> {
+    try {
+      await this.s3Client.send(
+        new HeadObjectCommand({
+          Bucket: this.config.r2.bucketName,
+          Key: key,
+        }),
+      );
+      return true;
+    } catch (err: any) {
       return false;
     }
   }

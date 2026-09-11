@@ -120,7 +120,8 @@ export class WorkDriveService {
     let downloadedBytes = 0;
     let lastReportedPercent = -1;
 
-    const writer = fs.createWriteStream(destinationPath);
+    const tempDownloadPath = `${destinationPath}.tmp`;
+    const writer = fs.createWriteStream(tempDownloadPath);
 
     // Transform stream tracks bytes and progress without breaking backpressure
     const progressTracker = new Transform({
@@ -140,14 +141,18 @@ export class WorkDriveService {
 
     try {
       await pipeline(response.data, progressTracker, writer);
-      console.log(`✅ [WorkDrive] Download completed: ${destinationPath}`);
+      if (fs.existsSync(destinationPath)) {
+        fs.unlinkSync(destinationPath);
+      }
+      fs.renameSync(tempDownloadPath, destinationPath);
+      console.log(`\n✅ [WorkDrive] Download completed: ${destinationPath}`);
       return destinationPath;
     } catch (err: any) {
-      console.error('❌ [WorkDrive] Download stream error:', err.message);
+      console.error('\n❌ [WorkDrive] Download stream error:', err.message);
       // Clean up partial file on failure
       try {
-        if (fs.existsSync(destinationPath)) {
-          fs.unlinkSync(destinationPath);
+        if (fs.existsSync(tempDownloadPath)) {
+          fs.unlinkSync(tempDownloadPath);
         }
       } catch {}
       throw err;

@@ -49,41 +49,94 @@ export class VideoPipeline {
     console.log(`📦 WorkDrive Size: ${(video.sizeBytes / (1024 * 1024)).toFixed(1)} MB`);
     console.log(`============================================================`);
 
+    const targetFileName = formatVideoKey(video.name);
+    const r2Key = `videos/${targetFileName}`;
+
+    // 0. Check if already uploaded to Cloudflare R2
+    const alreadyInR2 = await this.r2Service.fileExists(r2Key);
+    if (alreadyInR2) {
+      console.log(`\n⚡ Already uploaded to Cloudflare R2: "${r2Key}". Skipping download & processing!`);
+      const publicDomain = this.config.r2.publicDomain.replace(/\/$/, '');
+      const r2Url = publicDomain
+        ? `${publicDomain}/${r2Key}`
+        : `https://${this.config.r2.accountId}.r2.cloudflarestorage.com/${this.config.r2.bucketName}/${r2Key}`;
+
+      const record: ProcessedVideoRecord = {
+        workDriveFileId: video.id,
+        fileName: video.name,
+        originalSizeBytes: video.sizeBytes,
+        r2Key,
+        r2Url,
+        processedAt: new Date().toISOString(),
+      };
+      this.stateService.recordSuccess(record);
+      return record;
+    }
+
     const rawExt = video.extn || 'mp4';
     const tempDir = this.config.automation.tempDir;
     const rawFilePath = path.join(tempDir, `${video.id}_raw.${rawExt}`);
     const compressedFilePath = path.join(tempDir, `${video.id}_compressed.mp4`);
 
     try {
-      // 1. Download from Zoho WorkDrive
-      console.log(`\n[1/3] ⬇️ Downloading from WorkDrive...`);
-      await this.workDriveService.downloadFile(
-        video.id,
-        rawFilePath,
-        (percent, mb) => {
-          process.stdout.write(`\r   Downloading: ${percent}% (${mb.toFixed(1)} MB)`);
-        },
-      );
-      process.stdout.write('\n');
+      // 1. Download from Zoho WorkDrive (or reuse if already downloaded)
+      const isRawDownloaded =
+        fs.existsSync(rawFilePath) &&
+        ((video.sizeBytes > 0 && fs.statSync(rawFilePath).size === video.sizeBytes) ||
+          (video.sizeBytes === 0 && fs.statSync(rawFilePath).size > 0));
 
-      // 2. Compress via FFmpeg (+faststart)
-      console.log(`\n[2/3] 🗜️ Compressing with FFmpeg (H.264 +faststart)...`);
-      const compResult: CompressionResult = await this.compressorService.compressVideo(
-        rawFilePath,
-        compressedFilePath,
-        (percent, fps, timeMark) => {
-          process.stdout.write(
-            `\r   Compressing: ${percent}% | FPS: ${fps} | Time: ${timeMark}`,
-          );
-        },
-      );
-      process.stdout.write('\n');
+      if (isRawDownloaded) {
+        const mb = (fs.statSync(rawFilePath).size / (1024 * 1024)).toFixed(1);
+        console.log(`\n[1/3] ⏩ Raw video already downloaded (${mb} MB). Skipping download!`);
+      } else {
+        console.log(`\n[1/3] ⬇️ Downloading from WorkDrive...`);
+        await this.workDriveService.downloadFile(
+          video.id,
+          rawFilePath,
+          (percent, mb) => {
+            process.stdout.write(`\r   Downloading: ${percent}% (${mb.toFixed(1)} MB)`);
+          },
+        );
+        process.stdout.write('\n');
+      }
+
+      // 2. Compress via FFmpeg (+faststart) (or reuse if already compressed)
+      let compResult: CompressionResult;
+      const isCompressed =
+        fs.existsSync(compressedFilePath) && fs.statSync(compressedFilePath).size > 0;
+
+      if (isCompressed) {
+        const compSize = fs.statSync(compressedFilePath).size;
+        const origSize = fs.existsSync(rawFilePath)
+          ? fs.statSync(rawFilePath).size
+          : video.sizeBytes;
+        const ratio =
+          origSize > 0 ? (((origSize - compSize) / origSize) * 100).toFixed(1) : '0.0';
+        console.log(
+          `\n[2/3] ⏩ Video already compressed (${(compSize / (1024 * 1024)).toFixed(1)} MB, ${ratio}% reduction). Skipping compression!`,
+        );
+        compResult = {
+          outputPath: compressedFilePath,
+          originalSizeBytes: origSize,
+          compressedSizeBytes: compSize,
+          compressionRatio: `${ratio}%`,
+        };
+      } else {
+        console.log(`\n[2/3] 🗜️ Compressing with FFmpeg (H.264 +faststart)...`);
+        compResult = await this.compressorService.compressVideo(
+          rawFilePath,
+          compressedFilePath,
+          (percent, fps, timeMark) => {
+            process.stdout.write(
+              `\r   Compressing: ${percent}% | FPS: ${fps} | Time: ${timeMark}`,
+            );
+          },
+        );
+        process.stdout.write('\n');
+      }
 
       // 3. Upload to Cloudflare R2
       console.log(`\n[3/3] ☁️ Uploading to Cloudflare R2...`);
-      const targetFileName = formatVideoKey(video.name);
-      const r2Key = `videos/${targetFileName}`;
-
       const uploadResult: R2UploadResult = await this.r2Service.uploadVideo(
         compressedFilePath,
         r2Key,
@@ -107,12 +160,17 @@ export class VideoPipeline {
 
       this.stateService.recordSuccess(record);
 
-      console.log(`\n✨ Success: "${video.name}" is live at: ${uploadResult.r2Url}`);
-      return record;
-    } finally {
-      // 5. Cleanup local temp files
+      // 5. Cleanup local temp files ONLY on success
       this.cleanupFile(rawFilePath);
       this.cleanupFile(compressedFilePath);
+
+      console.log(`\n✨ Success: "${video.name}" is live at: ${uploadResult.r2Url}`);
+      return record;
+    } catch (err: any) {
+      console.warn(
+        `\n⚠️ [Recovery] Temp files preserved on failure for resume: ${rawFilePath}`,
+      );
+      throw err;
     }
   }
 
