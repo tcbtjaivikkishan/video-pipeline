@@ -1,6 +1,23 @@
 import { loadConfig } from './config';
 import { VideoPipeline } from './pipeline';
 
+async function notifyMainServerSync() {
+  try {
+    const res = await fetch(
+      'http://localhost:3000/education/courses/tcbt-organic-farming-101/sync',
+      { method: 'POST' },
+    );
+    if (res.ok) {
+      const data = (await res.json()) as any;
+      console.log(
+        `📡 Main server dynamic sync triggered successfully: ${data.totalLectures} lectures active.`,
+      );
+    }
+  } catch {
+    // Main server may not be running locally; ignore
+  }
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const isTest = args.includes('--test');
@@ -34,7 +51,10 @@ async function main() {
 
     const runLoop = async () => {
       try {
-        await pipeline.runFolderSync();
+        const results = await pipeline.runFolderSync();
+        if (results && results.length > 0) {
+          await notifyMainServerSync();
+        }
       } catch (err: any) {
         console.error('❌ Pipeline run error:', err.message);
       }
@@ -79,6 +99,8 @@ async function main() {
         );
       });
       console.log(`============================================================\n`);
+
+      await notifyMainServerSync();
     }
   } catch (err: any) {
     console.error(`\n❌ Pipeline execution failed: ${err.message}`);

@@ -1,4 +1,653 @@
 {
-  "lastRunAt": null,
-  "videos": {}
+  "lastRunAt": "2026-11-13T06:17:16.504Z",
+  "videos": {
+    "gg2nba00233f7b79147a0a991a8d8cc6dbdf7": {
+      "workDriveFileId": "gg2nba00233f7b79147a0a991a8d8cc6dbdf7",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 01-08-2026 CLASS 1.mp4",
+      "originalSizeBytes": 2280370332,
+      "r2Key": "videos/CLASS 1.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 1.mp4",
+      "processedAt": "2026-10-26T17:55:11.211Z"
+    },
+    "geusbe9c426d1eff84dc39fd98f460837792c": {
+      "workDriveFileId": "geusbe9c426d1eff84dc39fd98f460837792c",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 03-08-2026 CLASS 2.mp4",
+      "originalSizeBytes": 665014570,
+      "r2Key": "videos/CLASS 2.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 2.mp4",
+      "processedAt": "2026-10-26T17:55:11.520Z"
+    },
+    "5h7i5559abf52b469496b9687162d210fe489": {
+      "workDriveFileId": "5h7i5559abf52b469496b9687162d210fe489",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 04-08-2026 CLASS 3.mp4",
+      "originalSizeBytes": 1180645679,
+      "r2Key": "videos/CLASS 3.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 3.mp4",
+      "processedAt": "2026-10-26T17:55:11.764Z"
+    },
+    "t2mn224183a5fa59e4e63a4c48e963791d9e0": {
+      "workDriveFileId": "t2mn224183a5fa59e4e63a4c48e963791d9e0",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान  05-08-2026 CLASS 4.mp4",
+      "originalSizeBytes": 972100877,
+      "r2Key": "videos/CLASS 4.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 4.mp4",
+      "processedAt": "2026-10-26T17:55:12.101Z"
+    },
+    "qbm0l7f5bdf88feda4357bbd846774e261f30": {
+      "workDriveFileId": "qbm0l7f5bdf88feda4357bbd846774e261f30",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 06-08-2026 CLASS 5.mp4",
+      "originalSizeBytes": 846386706,
+      "r2Key": "videos/CLASS 5.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 5.mp4",
+      "processedAt": "2026-10-26T17:55:12.358Z"
+    },
+    "ph3aq33be26dc038540909dee5ed925b1f5ed": {
+      "workDriveFileId": "ph3aq33be26dc038540909dee5ed925b1f5ed",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 07-08-2026 CLASS 6.mp4",
+      "originalSizeBytes": 912125429,
+      "r2Key": "videos/CLASS 6.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 6.mp4",
+      "processedAt": "2026-10-26T17:55:12.614Z"
+    },
+    "fo6923756c9fae9794d30bba076046156c0f5": {
+      "workDriveFileId": "fo6923756c9fae9794d30bba076046156c0f5",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 10-08-2026 CLASS 7.mp4",
+      "originalSizeBytes": 1087319153,
+      "r2Key": "videos/CLASS 7.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 7.mp4",
+      "processedAt": "2026-10-26T17:55:12.844Z"
+    },
+    "c5q5ad88fae062597449992b4acf474343ed4": {
+      "workDriveFileId": "c5q5ad88fae062597449992b4acf474343ed4",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 11-08-2026 CLASS 8.mp4",
+      "originalSizeBytes": 892787364,
+      "r2Key": "videos/CLASS 8.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 8.mp4",
+      "processedAt": "2026-10-26T17:55:13.077Z"
+    },
+    "c5q5acb47a19757d94491b438bb64c3eef19b": {
+      "workDriveFileId": "c5q5acb47a19757d94491b438bb64c3eef19b",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 12-08-2026 CLASS 9.mp4",
+      "originalSizeBytes": 722476370,
+      "r2Key": "videos/CLASS 9.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 9.mp4",
+      "processedAt": "2026-10-26T17:55:13.339Z"
+    },
+    "44fzxc1728568576849f3a0e5028a16302b3b": {
+      "workDriveFileId": "44fzxc1728568576849f3a0e5028a16302b3b",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 13-08-2026 CLASS 10.mp4",
+      "originalSizeBytes": 770967592,
+      "r2Key": "videos/CLASS 10.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 10.mp4",
+      "processedAt": "2026-10-26T17:55:13.577Z"
+    },
+    "g2d7a2d527643a5114a4f89f8cfffbd818378": {
+      "workDriveFileId": "g2d7a2d527643a5114a4f89f8cfffbd818378",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 14-08-2026 CLASS 11.mp4",
+      "originalSizeBytes": 1006340746,
+      "r2Key": "videos/CLASS 11.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 11.mp4",
+      "processedAt": "2026-10-26T17:55:13.885Z"
+    },
+    "8u5xt431bac1d293d4bcdbbe229e4dea5edc1": {
+      "workDriveFileId": "8u5xt431bac1d293d4bcdbbe229e4dea5edc1",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 17-08-2026 CLASS 12.mp4",
+      "originalSizeBytes": 804537335,
+      "r2Key": "videos/CLASS 12.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 12.mp4",
+      "processedAt": "2026-10-26T17:55:14.112Z"
+    },
+    "2cib34ea8be4ba8a84fefad827d2cf004fa63": {
+      "workDriveFileId": "2cib34ea8be4ba8a84fefad827d2cf004fa63",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 18-08-2026 CLASS 13.mp4",
+      "originalSizeBytes": 870333641,
+      "r2Key": "videos/CLASS 13.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 13.mp4",
+      "processedAt": "2026-10-26T17:55:14.359Z"
+    },
+    "2cib34127e3360346451f9c02a1787694662b": {
+      "workDriveFileId": "2cib34127e3360346451f9c02a1787694662b",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 19-08-2026 CLASS 14.mp4",
+      "originalSizeBytes": 914690506,
+      "r2Key": "videos/CLASS 14.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 14.mp4",
+      "processedAt": "2026-10-26T17:55:14.599Z"
+    },
+    "bw7sn7148cb9afcde4fbfa1586877dd345742": {
+      "workDriveFileId": "bw7sn7148cb9afcde4fbfa1586877dd345742",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 20-08-2026 CLASS 15.mp4",
+      "originalSizeBytes": 874665989,
+      "r2Key": "videos/CLASS 15.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 15.mp4",
+      "processedAt": "2026-10-26T17:55:14.844Z"
+    },
+    "zb7t90f0e3556ac9141e4bfd29fbfcb929fd1": {
+      "workDriveFileId": "zb7t90f0e3556ac9141e4bfd29fbfcb929fd1",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 21-08-2026 CLASS 16.mp4",
+      "originalSizeBytes": 855636404,
+      "r2Key": "videos/CLASS 16.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 16.mp4",
+      "processedAt": "2026-10-26T17:55:15.093Z"
+    },
+    "wclqdb9aa72dd19c3468e9a362c5ee24bbf37": {
+      "workDriveFileId": "wclqdb9aa72dd19c3468e9a362c5ee24bbf37",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 24-08-2026 CLASS 17.mp4",
+      "originalSizeBytes": 864016647,
+      "r2Key": "videos/CLASS 17.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 17.mp4",
+      "processedAt": "2026-10-26T17:55:15.459Z"
+    },
+    "dilvaf6cc273139354f349b182d668a6963b9": {
+      "workDriveFileId": "dilvaf6cc273139354f349b182d668a6963b9",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 25-08-2026 CLASS 18.mp4",
+      "originalSizeBytes": 866322005,
+      "r2Key": "videos/CLASS 18.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 18.mp4",
+      "processedAt": "2026-10-26T17:55:15.684Z"
+    },
+    "jxy8w5d78a3848a944443b873543c56881c39": {
+      "workDriveFileId": "jxy8w5d78a3848a944443b873543c56881c39",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 26-08-2026 CLASS 19.mp4",
+      "originalSizeBytes": 889118457,
+      "r2Key": "videos/CLASS 19.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 19.mp4",
+      "processedAt": "2026-10-26T17:55:15.909Z"
+    },
+    "ozm9q4eb673dc80fb4b91ab22cf0b30c0d479": {
+      "workDriveFileId": "ozm9q4eb673dc80fb4b91ab22cf0b30c0d479",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 27-08-2026 CLASS 20.mp4",
+      "originalSizeBytes": 923775801,
+      "r2Key": "videos/CLASS 20.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 20.mp4",
+      "processedAt": "2026-10-26T17:55:16.150Z"
+    },
+    "ti0jq2ab2258c0f324bffb4ec53cffc6470a9": {
+      "workDriveFileId": "ti0jq2ab2258c0f324bffb4ec53cffc6470a9",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 28-08-2026 CLASS 21.mp4",
+      "originalSizeBytes": 671212939,
+      "r2Key": "videos/CLASS 21.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 21.mp4",
+      "processedAt": "2026-10-26T17:55:16.479Z"
+    },
+    "uly367abde07482d1482b9facedfeacda3572": {
+      "workDriveFileId": "uly367abde07482d1482b9facedfeacda3572",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 31-08-2026 CLASS 22.mp4",
+      "originalSizeBytes": 945488804,
+      "compressedSizeBytes": 352801389,
+      "compressionRatio": "62.7%",
+      "r2Key": "videos/CLASS 22.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 22.mp4",
+      "processedAt": "2026-10-26T18:04:03.927Z"
+    },
+    "lyaab3198ebccf7d2429c8b2d0c3e37ced815": {
+      "workDriveFileId": "lyaab3198ebccf7d2429c8b2d0c3e37ced815",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 01-09-2026 CLASS 23.mp4",
+      "originalSizeBytes": 878141220,
+      "r2Key": "videos/CLASS 23.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 23.mp4",
+      "processedAt": "2026-10-26T18:04:04.189Z"
+    },
+    "himkrd4024355367a41489f78b68f2283d36d": {
+      "workDriveFileId": "himkrd4024355367a41489f78b68f2283d36d",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 02-09-2026 CLASS 24.mp4",
+      "originalSizeBytes": 898343874,
+      "r2Key": "videos/CLASS 24.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 24.mp4",
+      "processedAt": "2026-10-26T18:04:04.451Z"
+    },
+    "r4jl240e91b2f08d04cbda4a6c666e4cb2b85": {
+      "workDriveFileId": "r4jl240e91b2f08d04cbda4a6c666e4cb2b85",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 03-09-2026  CLASS 25.mp4",
+      "originalSizeBytes": 875431866,
+      "r2Key": "videos/CLASS 25.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 25.mp4",
+      "processedAt": "2026-10-26T18:04:04.754Z"
+    },
+    "3etzv4794b0937d034ef7a9b20f151336d792": {
+      "workDriveFileId": "3etzv4794b0937d034ef7a9b20f151336d792",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 04-09-2026 CLASS 26.mp4",
+      "originalSizeBytes": 855773156,
+      "r2Key": "videos/CLASS 26.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 26.mp4",
+      "processedAt": "2026-10-26T18:04:05.086Z"
+    },
+    "ahw4f951a7727340d4de6935fa5992f0f3581": {
+      "workDriveFileId": "ahw4f951a7727340d4de6935fa5992f0f3581",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 07-09-2026 CLASS 27.mp4",
+      "originalSizeBytes": 833162890,
+      "r2Key": "videos/CLASS 27.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 27.mp4",
+      "processedAt": "2026-10-26T18:04:05.306Z"
+    },
+    "yzt7cc350daa2bb774a818578d8fc22b2d00e": {
+      "workDriveFileId": "yzt7cc350daa2bb774a818578d8fc22b2d00e",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 08-09-2026 CLASS 28.mp4",
+      "originalSizeBytes": 844367623,
+      "r2Key": "videos/CLASS 28.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 28.mp4",
+      "processedAt": "2026-10-26T18:04:05.553Z"
+    },
+    "jq7tv75d15564f41a40a687e365f988b933ec": {
+      "workDriveFileId": "jq7tv75d15564f41a40a687e365f988b933ec",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 09-09-2026  CLASS 29.mp4",
+      "originalSizeBytes": 811223342,
+      "r2Key": "videos/CLASS 29.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 29.mp4",
+      "processedAt": "2026-10-26T18:04:05.816Z"
+    },
+    "gfx5ad4e73d79f63b42a4a9755dcd93dfc279": {
+      "workDriveFileId": "gfx5ad4e73d79f63b42a4a9755dcd93dfc279",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 10-09-2026 CLASS 30.mp4",
+      "originalSizeBytes": 793076415,
+      "r2Key": "videos/CLASS 30.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 30.mp4",
+      "processedAt": "2026-10-26T18:04:06.064Z"
+    },
+    "hp1fa3479d7a0b8614beb99e28d90e2ef34c9": {
+      "workDriveFileId": "hp1fa3479d7a0b8614beb99e28d90e2ef34c9",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 11-09-2026 CLASS 31.mp4",
+      "originalSizeBytes": 886959925,
+      "r2Key": "videos/CLASS 31.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 31.mp4",
+      "processedAt": "2026-10-26T18:04:06.301Z"
+    },
+    "wx4fl4d9deffdfa5e4f7eb97772b593c01669": {
+      "workDriveFileId": "wx4fl4d9deffdfa5e4f7eb97772b593c01669",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 14-09-2026 CLASS 32.mp4",
+      "originalSizeBytes": 717137917,
+      "r2Key": "videos/CLASS 32.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 32.mp4",
+      "processedAt": "2026-10-26T18:04:06.555Z"
+    },
+    "bys89dd079e5e64514376aad7d9ec9e132a55": {
+      "workDriveFileId": "bys89dd079e5e64514376aad7d9ec9e132a55",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 15-09-2026 CLASS 33.mp4",
+      "originalSizeBytes": 807306670,
+      "r2Key": "videos/CLASS 33.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 33.mp4",
+      "processedAt": "2026-10-26T18:04:06.822Z"
+    },
+    "771js604ada88abe84c2cac31ce6cda1280de": {
+      "workDriveFileId": "771js604ada88abe84c2cac31ce6cda1280de",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 16-09-2026 CLASS 34.mp4",
+      "originalSizeBytes": 848655754,
+      "r2Key": "videos/CLASS 34.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 34.mp4",
+      "processedAt": "2026-10-26T18:04:07.135Z"
+    },
+    "had0af9b74d68159c44aa892e1b408dd82a7a": {
+      "workDriveFileId": "had0af9b74d68159c44aa892e1b408dd82a7a",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 17-09-2026 CLASS 35.mp4",
+      "originalSizeBytes": 818799691,
+      "r2Key": "videos/CLASS 35.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 35.mp4",
+      "processedAt": "2026-10-26T18:04:07.362Z"
+    },
+    "ngmvcde8e3f5bcdb449a08c2e7399b9e1a033": {
+      "workDriveFileId": "ngmvcde8e3f5bcdb449a08c2e7399b9e1a033",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 18-09-2026 CLASS 36.mp4",
+      "originalSizeBytes": 840420837,
+      "r2Key": "videos/CLASS 36.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 36.mp4",
+      "processedAt": "2026-10-26T18:04:07.624Z"
+    },
+    "pregwd1ea17bb9bed425ab1001ccb7ccaa4a9": {
+      "workDriveFileId": "pregwd1ea17bb9bed425ab1001ccb7ccaa4a9",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 21-09-2026 CLASS 37.mp4",
+      "originalSizeBytes": 875238916,
+      "r2Key": "videos/CLASS 37.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 37.mp4",
+      "processedAt": "2026-10-26T18:04:07.954Z"
+    },
+    "qx30n9d368becab2a40e5a90716e486a9b489": {
+      "workDriveFileId": "qx30n9d368becab2a40e5a90716e486a9b489",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 22-09-2026 CLASS 38.mp4",
+      "originalSizeBytes": 817879149,
+      "r2Key": "videos/CLASS 38.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 38.mp4",
+      "processedAt": "2026-10-26T18:04:08.230Z"
+    },
+    "9f4uzb55fe67b52bb432496b587a0b98de765": {
+      "workDriveFileId": "9f4uzb55fe67b52bb432496b587a0b98de765",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 23-09-2026 CLASS 39.mp4",
+      "originalSizeBytes": 829307304,
+      "r2Key": "videos/CLASS 39.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 39.mp4",
+      "processedAt": "2026-10-26T18:04:08.468Z"
+    },
+    "kuu5me227c3fbe7aa4578b106b19554abef65": {
+      "workDriveFileId": "kuu5me227c3fbe7aa4578b106b19554abef65",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 24-09-2026 CLASS 40.mp4",
+      "originalSizeBytes": 846072066,
+      "compressedSizeBytes": 240343578,
+      "compressionRatio": "71.6%",
+      "r2Key": "videos/CLASS 40.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 40.mp4",
+      "processedAt": "2026-10-26T18:14:49.077Z"
+    },
+    "mbzsk637bb8249cdf435d8b5946fa6bd36bec": {
+      "workDriveFileId": "mbzsk637bb8249cdf435d8b5946fa6bd36bec",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 25-09-2026 CLASS 41.mp4",
+      "originalSizeBytes": 846675035,
+      "compressedSizeBytes": 326057906,
+      "compressionRatio": "61.5%",
+      "r2Key": "videos/CLASS 41.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 41.mp4",
+      "processedAt": "2026-10-26T18:34:26.220Z"
+    },
+    "x89s8466dfd557ea045e6a9aada93cbade8ba": {
+      "workDriveFileId": "x89s8466dfd557ea045e6a9aada93cbade8ba",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 28-09-2026 CLASS 42.mp4",
+      "originalSizeBytes": 887870034,
+      "compressedSizeBytes": 328907538,
+      "compressionRatio": "63.0%",
+      "r2Key": "videos/CLASS 42.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 42.mp4",
+      "processedAt": "2026-10-26T18:56:56.146Z"
+    },
+    "kewkp450c794dcb924c1e9a30ec9e3a745730": {
+      "workDriveFileId": "kewkp450c794dcb924c1e9a30ec9e3a745730",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 29-09-2026 CLASS 43.mp4",
+      "originalSizeBytes": 835210442,
+      "compressedSizeBytes": 196272021,
+      "compressionRatio": "76.5%",
+      "r2Key": "videos/CLASS 43.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 43.mp4",
+      "processedAt": "2026-10-26T19:05:12.254Z"
+    },
+    "eyb7j4c6486616a6c4c9fb380fbe5dfc8e479": {
+      "workDriveFileId": "eyb7j4c6486616a6c4c9fb380fbe5dfc8e479",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 30-09-2026 CLASS 44.mp4",
+      "originalSizeBytes": 825915286,
+      "compressedSizeBytes": 285227115,
+      "compressionRatio": "65.5%",
+      "r2Key": "videos/CLASS 44.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 44.mp4",
+      "processedAt": "2026-10-26T19:21:50.607Z"
+    },
+    "v6no9f5a26c7211db4ea8ac00eaeb7b355258": {
+      "workDriveFileId": "v6no9f5a26c7211db4ea8ac00eaeb7b355258",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 02-10-2026 CLASS 45.mp4",
+      "originalSizeBytes": 833445543,
+      "compressedSizeBytes": 167913035,
+      "compressionRatio": "79.9%",
+      "r2Key": "videos/CLASS 45.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 45.mp4",
+      "processedAt": "2026-10-27T05:28:58.091Z"
+    },
+    "lkxsjc7620aa0d65f4775ae7a389b3a583fc6": {
+      "workDriveFileId": "lkxsjc7620aa0d65f4775ae7a389b3a583fc6",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 01-10-2026 CLASS 46.mp4",
+      "originalSizeBytes": 811890278,
+      "compressedSizeBytes": 243036899,
+      "compressionRatio": "70.1%",
+      "r2Key": "videos/CLASS 46.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 46.mp4",
+      "processedAt": "2026-10-27T05:33:14.215Z"
+    },
+    "5lehz2d2a9f11667c47e3ba21124539d7401c": {
+      "workDriveFileId": "5lehz2d2a9f11667c47e3ba21124539d7401c",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 05-10-2026 CLASS 47.mp4",
+      "originalSizeBytes": 838451891,
+      "compressedSizeBytes": 154364761,
+      "compressionRatio": "81.6%",
+      "r2Key": "videos/CLASS 47.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 47.mp4",
+      "processedAt": "2026-10-27T05:37:05.847Z"
+    },
+    "z0pxg80c201c096b94dabbea3e75f251190b4": {
+      "workDriveFileId": "z0pxg80c201c096b94dabbea3e75f251190b4",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 06-10-2026 CLASS 48.mp4",
+      "originalSizeBytes": 827301567,
+      "compressedSizeBytes": 162951799,
+      "compressionRatio": "80.3%",
+      "r2Key": "videos/CLASS 48.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 48.mp4",
+      "processedAt": "2026-10-27T05:41:13.964Z"
+    },
+    "ql2hp8e8ba49582e744adb1a5fcddd519b156": {
+      "workDriveFileId": "ql2hp8e8ba49582e744adb1a5fcddd519b156",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 07-10-2026 CLASS 49.mp4",
+      "originalSizeBytes": 940754460,
+      "compressedSizeBytes": 199512924,
+      "compressionRatio": "78.8%",
+      "r2Key": "videos/CLASS 49.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 49.mp4",
+      "processedAt": "2026-10-27T05:46:13.272Z"
+    },
+    "39ocg866145014b944f18a4b7ddda24ef2a2a": {
+      "workDriveFileId": "39ocg866145014b944f18a4b7ddda24ef2a2a",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 08-10-2026 CLASS 50.mp4",
+      "originalSizeBytes": 828759219,
+      "compressedSizeBytes": 111781102,
+      "compressionRatio": "86.5%",
+      "r2Key": "videos/CLASS 50.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 50.mp4",
+      "processedAt": "2026-10-27T05:50:05.408Z"
+    },
+    "45kaae9a96f59cbbc4adc9d1c22901eaddd3f": {
+      "workDriveFileId": "45kaae9a96f59cbbc4adc9d1c22901eaddd3f",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 09-10-2026 CLASS 51.mp4",
+      "originalSizeBytes": 865757191,
+      "compressedSizeBytes": 335551678,
+      "compressionRatio": "61.2%",
+      "r2Key": "videos/CLASS 51.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 51.mp4",
+      "processedAt": "2026-10-27T05:56:43.135Z"
+    },
+    "iy5kv060bc867ff41445bbae3bf0b8c0bbca5": {
+      "workDriveFileId": "iy5kv060bc867ff41445bbae3bf0b8c0bbca5",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 12-10-2026 CLASS 52.mp4",
+      "originalSizeBytes": 801713616,
+      "compressedSizeBytes": 224599643,
+      "compressionRatio": "72.0%",
+      "r2Key": "videos/CLASS 52.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 52.mp4",
+      "processedAt": "2026-10-27T06:01:06.110Z"
+    },
+    "ml6t4108edf82a93c40aab86f71ec42c69b7d": {
+      "workDriveFileId": "ml6t4108edf82a93c40aab86f71ec42c69b7d",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 13-10-2026 CLASS 53.mp4",
+      "originalSizeBytes": 836806193,
+      "compressedSizeBytes": 286763486,
+      "compressionRatio": "65.7%",
+      "r2Key": "videos/CLASS 53.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 53.mp4",
+      "processedAt": "2026-10-27T06:06:57.241Z"
+    },
+    "niimh81eeecd9941b41f2b7150dea3c40ef94": {
+      "workDriveFileId": "niimh81eeecd9941b41f2b7150dea3c40ef94",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 14-10-2026 CLASS 54.mp4",
+      "originalSizeBytes": 844715063,
+      "compressedSizeBytes": 245336277,
+      "compressionRatio": "71.0%",
+      "r2Key": "videos/CLASS 54.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 54.mp4",
+      "processedAt": "2026-10-27T06:12:22.363Z"
+    },
+    "9mza8c8ec96b65bfe4e26a2d59895d76e59ee": {
+      "workDriveFileId": "9mza8c8ec96b65bfe4e26a2d59895d76e59ee",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 15-10-2026 CLASS 55.mp4",
+      "originalSizeBytes": 876614953,
+      "compressedSizeBytes": 225264312,
+      "compressionRatio": "74.3%",
+      "r2Key": "videos/CLASS 55.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 55.mp4",
+      "processedAt": "2026-10-27T06:17:19.742Z"
+    },
+    "f2b9q74cd24a6bd0747ccbce9b9d5bde88836": {
+      "workDriveFileId": "f2b9q74cd24a6bd0747ccbce9b9d5bde88836",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 16-10-2026 CLASS 56.mp4",
+      "originalSizeBytes": 909872746,
+      "compressedSizeBytes": 154355572,
+      "compressionRatio": "83.0%",
+      "r2Key": "videos/CLASS 56.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 56.mp4",
+      "processedAt": "2026-10-27T06:22:00.631Z"
+    },
+    "t64m87631b54671fa4d6eb5ec3e3d6b09750e": {
+      "workDriveFileId": "t64m87631b54671fa4d6eb5ec3e3d6b09750e",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 19-10-2026 CLASS 57.mp4",
+      "originalSizeBytes": 832223402,
+      "compressedSizeBytes": 266081288,
+      "compressionRatio": "68.0%",
+      "r2Key": "videos/CLASS 57.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 57.mp4",
+      "processedAt": "2026-10-27T06:27:48.612Z"
+    },
+    "g3x6db8e0add5c2cd4a74b485c89a4a8ff583": {
+      "workDriveFileId": "g3x6db8e0add5c2cd4a74b485c89a4a8ff583",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 20-10-2026 CLASS 58.mp4",
+      "originalSizeBytes": 899422278,
+      "compressedSizeBytes": 256004778,
+      "compressionRatio": "71.5%",
+      "r2Key": "videos/CLASS 58.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 58.mp4",
+      "processedAt": "2026-10-27T06:33:42.762Z"
+    },
+    "voxqwac122609fc54486c8775e8cffc1bb67c": {
+      "workDriveFileId": "voxqwac122609fc54486c8775e8cffc1bb67c",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 22-10-2026 CLASS 59.mp4",
+      "originalSizeBytes": 875050160,
+      "compressedSizeBytes": 211435687,
+      "compressionRatio": "75.8%",
+      "r2Key": "videos/CLASS 59.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 59.mp4",
+      "processedAt": "2026-10-27T06:39:07.873Z"
+    },
+    "jdzjj5461d53f1f52435784f5539c9c0d1c1c": {
+      "workDriveFileId": "jdzjj5461d53f1f52435784f5539c9c0d1c1c",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 21-10-2026 CLASS 59.mp4",
+      "originalSizeBytes": 886278843,
+      "r2Key": "videos/CLASS 59.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 59.mp4",
+      "processedAt": "2026-10-27T06:39:08.088Z"
+    },
+    "ud46083d65305706149818fea25da2e67dcc0": {
+      "workDriveFileId": "ud46083d65305706149818fea25da2e67dcc0",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 23-10-2026 CLASS 60.mp4",
+      "originalSizeBytes": 857279646,
+      "compressedSizeBytes": 211429432,
+      "compressionRatio": "75.3%",
+      "r2Key": "videos/CLASS 60.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 60.mp4",
+      "processedAt": "2026-10-27T06:45:20.656Z"
+    },
+    "kputrdd5ec46ace77447f97ebb7ff820e3854": {
+      "workDriveFileId": "kputrdd5ec46ace77447f97ebb7ff820e3854",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 26-10-2026 CLASS 61.mp4",
+      "originalSizeBytes": 870797838,
+      "compressedSizeBytes": 208187913,
+      "compressionRatio": "76.1%",
+      "r2Key": "videos/CLASS 61.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 61.mp4",
+      "processedAt": "2026-10-27T06:50:51.319Z"
+    },
+    "pcbdjcf43fd5874b34b2ca1c1dc4b68023482": {
+      "workDriveFileId": "pcbdjcf43fd5874b34b2ca1c1dc4b68023482",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 27-10-2026 CLASS 62.mp4",
+      "originalSizeBytes": 795705451,
+      "compressedSizeBytes": 135281817,
+      "compressionRatio": "83.0%",
+      "r2Key": "videos/CLASS 62.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 62.mp4",
+      "processedAt": "2026-10-27T07:25:18.417Z"
+    },
+    "t9hqj73faaea55b9b4dba9b00504381eb7255": {
+      "workDriveFileId": "t9hqj73faaea55b9b4dba9b00504381eb7255",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 28-10-2026 CLASS 63.mp4",
+      "originalSizeBytes": 691060137,
+      "compressedSizeBytes": 161966540,
+      "compressionRatio": "76.6%",
+      "r2Key": "videos/CLASS 63.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 63.mp4",
+      "processedAt": "2026-11-12T12:12:42.211Z"
+    },
+    "nychebad8f994ce4a4a64b4d15bc1c131caac": {
+      "workDriveFileId": "nychebad8f994ce4a4a64b4d15bc1c131caac",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 02-11-2026 CLASS 64.mp4",
+      "originalSizeBytes": 287694278,
+      "compressedSizeBytes": 168453721,
+      "compressionRatio": "41.4%",
+      "r2Key": "videos/CLASS 64.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 64.mp4",
+      "processedAt": "2026-11-12T12:22:07.056Z"
+    },
+    "bzcn305e71232b26140c5b59548e2a7a4bb16": {
+      "workDriveFileId": "bzcn305e71232b26140c5b59548e2a7a4bb16",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 29-10-2026 CLASS 64.mp4",
+      "originalSizeBytes": 732434047,
+      "r2Key": "videos/CLASS 64.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 64.mp4",
+      "processedAt": "2026-11-12T12:22:07.273Z"
+    },
+    "5dny5825f6c7577d1480cb75b44608008316a": {
+      "workDriveFileId": "5dny5825f6c7577d1480cb75b44608008316a",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 03-11-2026 CLASS 65.mp4",
+      "originalSizeBytes": 5006009,
+      "compressedSizeBytes": 3415834,
+      "compressionRatio": "31.8%",
+      "r2Key": "videos/CLASS 65.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 65.mp4",
+      "processedAt": "2026-11-12T12:22:14.878Z"
+    },
+    "twq2m694ec2375b864abd8594f0269ccd7c58": {
+      "workDriveFileId": "twq2m694ec2375b864abd8594f0269ccd7c58",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 30-10-2026 CLASS 65.mp4",
+      "originalSizeBytes": 690304350,
+      "r2Key": "videos/CLASS 65.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 65.mp4",
+      "processedAt": "2026-11-12T12:22:15.353Z"
+    },
+    "nyche8ca4155d376c4663939f781132fc5543": {
+      "workDriveFileId": "nyche8ca4155d376c4663939f781132fc5543",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 04-11-2026 CLASS 66.mp4",
+      "originalSizeBytes": 589830858,
+      "compressedSizeBytes": 134628767,
+      "compressionRatio": "77.2%",
+      "r2Key": "videos/CLASS 66.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 66.mp4",
+      "processedAt": "2026-11-12T12:32:01.628Z"
+    },
+    "pp74h8c7a1d8cf1e649b6bc02fff7d1c371c1": {
+      "workDriveFileId": "pp74h8c7a1d8cf1e649b6bc02fff7d1c371c1",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 05-11-2026 CLASS 67.mp4",
+      "originalSizeBytes": 644229617,
+      "compressedSizeBytes": 160316572,
+      "compressionRatio": "75.1%",
+      "r2Key": "videos/CLASS 67.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 67.mp4",
+      "processedAt": "2026-11-12T12:45:09.082Z"
+    },
+    "t3nhgf1d0dc9e92e348f3be245bb4c420f2c5": {
+      "workDriveFileId": "t3nhgf1d0dc9e92e348f3be245bb4c420f2c5",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 06-11-2026 CLASS 68.mp4",
+      "originalSizeBytes": 676121328,
+      "compressedSizeBytes": 158137456,
+      "compressionRatio": "76.6%",
+      "r2Key": "videos/CLASS 68.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 68.mp4",
+      "processedAt": "2026-11-13T05:48:12.402Z"
+    },
+    "byiwna3702c2dd4324324b3576eb53de8215f": {
+      "workDriveFileId": "byiwna3702c2dd4324324b3576eb53de8215f",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 12-11-2026   CLASS 69.mp4",
+      "originalSizeBytes": 726939133,
+      "compressedSizeBytes": 132680913,
+      "compressionRatio": "81.7%",
+      "r2Key": "videos/CLASS 69.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 69.mp4",
+      "processedAt": "2026-11-13T06:00:58.283Z"
+    },
+    "4vubs33c5db170e5a4dfe88339f29c3eefd09": {
+      "workDriveFileId": "4vubs33c5db170e5a4dfe88339f29c3eefd09",
+      "fileName": "TCBT वृक्षायुर्वेद विज्ञान 13-11-2026 CLASS 70.mp4",
+      "originalSizeBytes": 649092852,
+      "compressedSizeBytes": 120631100,
+      "compressionRatio": "81.4%",
+      "r2Key": "videos/CLASS 70.mp4",
+      "r2Url": "https://pub-b30bf5dcb5c54e619a24a0f7d1b2d91e.r2.dev/videos/CLASS 70.mp4",
+      "processedAt": "2026-11-13T06:17:16.504Z"
+    }
+  }
 }
